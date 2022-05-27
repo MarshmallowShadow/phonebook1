@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.javaex.dao.PhoneDao" %>
 <%@ page import="com.javaex.vo.PersonVo"  %>
+<%@ page import="com.javaex.dao.PhoneDao" %>
 <%@ page import="java.util.List" %>
 
 <% 
@@ -42,22 +42,22 @@
 				<table border="1">
 					<tr>
 						<td>이름(name)</td>
-						<td><%=pList.get(i).getName() %></td>
+						<td><%=name %></td>
 					</tr>
 					<tr>
 						<td>핸드폰(hp)</td>
-						<td><%=pList.get(i).getHp() %></td>
+						<td><%=hp %></td>
 					</tr>
 					<tr>
 						<td>회사(company)</td>
-						<td><%=pList.get(i).getCompany() %></td>
+						<td><%=company %></td>
 					</tr>
 				</table>
 					<form action="updateForm.jsp" method="post" style="display: inline-block">
-						<button type="submit" name="personId" value="<%=pList.get(i).getPersonId() %>">수정</button>
+						<button type="submit" name="personId" value="<%=personId %>">수정</button>
 					</form>
 					<form action="delete.jsp" method="post" style="display: inline-block">
-						<button type="submit" name="personId" value="<%=pList.get(i).getPersonId() %>">삭제</button>
+						<button type="submit" name="personId" value="<%=personId %>">삭제</button>
 					</form>
 				<br>
 				<br>
