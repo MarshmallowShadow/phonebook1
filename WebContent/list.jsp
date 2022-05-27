@@ -53,10 +53,10 @@
 						<td><%=pList.get(i).getCompany() %></td>
 					</tr>
 				</table>
-					<form action="updateForm.jsp" method="get" style="display: inline-block">
+					<form action="updateForm.jsp" method="post" style="display: inline-block">
 						<button type="submit" name="personId" value="<%=pList.get(i).getPersonId() %>">수정</button>
 					</form>
-					<form action="delete.jsp" method="get" style="display: inline-block">
+					<form action="delete.jsp" method="post" style="display: inline-block">
 						<button type="submit" name="personId" value="<%=pList.get(i).getPersonId() %>">삭제</button>
 					</form>
 				<br>

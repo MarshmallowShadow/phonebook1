@@ -13,7 +13,7 @@
 		<p>전화번호 등록할려면<br>
 			아래 황목을 가입하고 "등록" 버튼을 눌러주세요
 		</p>
-		<form action="./insert.jsp" method="get">
+		<form action="./insert.jsp" method="post">
 			<label for="name">이름(name)</label>
 			<input type="text" id="name" name="name" value=""><br>
 			<label for="hp">전화번호(hp)</label>

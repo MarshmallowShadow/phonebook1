@@ -125,7 +125,6 @@ public class PhoneDao {
 		return count;
 	}
 	
-	
 	public List<PersonVo> personSelect() {
 		List<PersonVo> pList = new ArrayList<>();
 		
@@ -158,5 +157,42 @@ public class PhoneDao {
 		
 		close();
 		return pList;
+	}
+	
+	
+	public PersonVo getPerson(int pId) {
+		PersonVo pVo = new PersonVo();
+		
+		try {
+			getConnection();
+			
+			String query = "";
+			query += " select	person_id,";
+			query += " 			name,";
+			query += " 			hp,";
+			query += " 			company";
+			query += " from		person";
+			query += " where		person_id = ?";
+			
+			pstmt = conn.prepareStatement(query);
+			
+			if(pId != 0) {
+				pstmt.setInt(1, pId);
+			}
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				pVo.setName(rs.getString("name"));
+				pVo.setHp(rs.getString("hp"));
+				pVo.setCompany(rs.getString("company"));
+			}
+			
+		} catch(SQLException e) {
+			System.out.println("error: " + e);
+		}
+		
+		close();
+		return pVo;
 	}
 }
