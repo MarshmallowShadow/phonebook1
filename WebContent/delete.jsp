@@ -4,7 +4,7 @@
 <%@ page import="java.util.*"%>
 
 <%
-	int personId = Integer.parseInt(request.getParameter("personId"));
+int personId = Integer.parseInt(request.getParameter("personId"));
 	
 	PhoneDao pDao = new PhoneDao();
 	List<PersonVo> pList = pDao.personSelect();

@@ -3,7 +3,8 @@
 <%@ page import="com.javaex.dao.PhoneDao" %>
 <%@ page import="java.util.List" %>
 
-<% 
+<%
+ 
 	PhoneDao phoneDao = new PhoneDao();
 	
 	List<PersonVo> pList = phoneDao.personSelect();

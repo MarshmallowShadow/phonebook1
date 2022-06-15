@@ -3,7 +3,7 @@
 <%@ page import="com.javaex.vo.PersonVo"%>
 
 <%
-	String name = request.getParameter("name");
+String name = request.getParameter("name");
 	String hp = request.getParameter("hp");
 	String company = request.getParameter("company");
 	int personId = Integer.parseInt(request.getParameter("personId"));
